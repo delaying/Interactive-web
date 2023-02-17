@@ -3,9 +3,15 @@ const canvas = document.querySelector("canvas");
 console.log(canvas);
 
 const ctx = canvas.getContext("2d");
-console.log(ctx);
+console.log(window.devicePixelRatio);
 
-canvas.style.width = 300 + "px";
-canvas.style.height = 300 + "px";
+const canvasWidth = 300;
+const canvasHeight = 300;
+
+canvas.style.width = canvasWidth + "px";
+canvas.style.height = canvasHeight + "px";
+
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
 
 ctx.fillRect(10, 10, 50, 50);
